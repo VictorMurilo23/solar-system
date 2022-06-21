@@ -1,3 +1,121 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('./images/background.png');
+  background-position: center;
+  color: white;
+  position: fixed;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+}
+
+.solarSystem {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.solarSystem .tituloPlanetas {
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: center;
+}
+
+.planetas {
+  display: flex;
+  justify-content: center;
+}
+
+.solarSystem .planetas .planetCard {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.solarSystem .planetCard p {
+  padding-top: 5px;
+}
+
+.solarSystem .planetas .planetCard img {
+  width: 8em;
+}
+
+.solarSystem .planetas .planetCard:nth-child( 1 ) img {
+  width: 2em;
+}
+
+.solarSystem .planetas .planetCard:nth-child( 2 ) img {
+  width: 4em;
+}
+
+.solarSystem .planetas .planetCard:nth-child( 3 ) img {
+  width: 5em;
+}
+
+.solarSystem .planetas .planetCard:nth-child( 4 ) img {
+  width: 3.5em;
+}
+
+.solarSystem .planetas .planetCard:nth-child( 5 ) img {
+  width: 12em;
+}
+
+.solarSystem .planetas .planetCard:nth-child( 6 ) img {
+  width: 12em;
+}
+
+.missionsContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+.missionsContainer .tituloMissões {
+  display: flex;
+  font-size: 1.2rem;
+  justify-self: center;
+
+  /* border: 1px solid red; */
+}
+
+.missionsContainer .todasAsMissoes {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px;
+  padding: 10px;
+}
+
+.missao {
+  background-color: rgba(0, 0, 0, 0.521);
+  border: 1px solid white;
+  margin-bottom: 8px;
+  margin-right: 10px;
+}
+
+.missao p:nth-child( 1 ) {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 5px;
+}
+
+.missao p:nth-child( n+2 ):nth-child( -n+15 ) {
+  padding-bottom: 2px;
+  text-indent: 5px;
 }
