@@ -15,7 +15,7 @@ Title.propTypes = {
 };
 
 Title.defaultProps = {
-  headline: 'Title',
+  headline: 'Planetas',
 };
 
 export default Title;
