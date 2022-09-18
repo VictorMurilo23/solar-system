@@ -11,16 +11,18 @@ class Missions extends React.Component {
 
         <div className="todasAsMissoes">
           {
-            missions.map((missao) => {
-              const { name, year, country, destination } = missao;
-              return (<MissionCard
-                name={ name }
-                year={ year }
-                country={ country }
-                destination={ destination }
-                key={ name }
-              />);
-            })
+            missions
+              .sort((a, b) => a.year - b.year)
+              .map((missao) => {
+                const { name, year, country, destination } = missao;
+                return (<MissionCard
+                  name={ name }
+                  year={ year }
+                  country={ country }
+                  destination={ destination }
+                  key={ name }
+                />);
+              })
           }
         </div>
       </div>

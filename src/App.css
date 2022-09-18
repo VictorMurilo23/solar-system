@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -7,17 +8,18 @@ body {
   background-image: url('./images/background.png');
   background-position: center;
   color: white;
-  position: fixed;
 }
 
 header {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  margin-top: 16px;
 }
 
 header h1 {
   font-size: 2.8rem;
+  font-weight: 500;
 }
 
 .solarSystem {
@@ -27,95 +29,104 @@ header h1 {
   justify-content: center;
 }
 
-.solarSystem .tituloPlanetas {
+.solarSystem .titlePlanets {
   display: flex;
   font-size: 1.2rem;
   justify-content: center;
 }
 
-.planetas {
+.planetsContainer {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
 }
 
-.solarSystem .planetas .planetCard {
+.solarSystem .planetsContainer .planetCard {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.solarSystem .planetsContainer .planetCard .planetName {
+  bottom: 0;
+  position: absolute;
 }
 
 .solarSystem .planetCard p {
   padding-top: 5px;
 }
 
-.solarSystem .planetas .planetCard img {
+.solarSystem .planetsContainer .planetCard img {
   width: 8em;
 }
 
-.solarSystem .planetas .planetCard:nth-child( 1 ) img {
+.solarSystem .planetsContainer .planetCard:nth-child( 1 ) img {
   width: 2em;
 }
 
-.solarSystem .planetas .planetCard:nth-child( 2 ) img {
+.solarSystem .planetsContainer .planetCard:nth-child( 2 ) img {
   width: 4em;
 }
 
-.solarSystem .planetas .planetCard:nth-child( 3 ) img {
+.solarSystem .planetsContainer .planetCard:nth-child( 3 ) img {
   width: 5em;
 }
 
-.solarSystem .planetas .planetCard:nth-child( 4 ) img {
+.solarSystem .planetsContainer .planetCard:nth-child( 4 ) img {
   width: 3.5em;
 }
 
-.solarSystem .planetas .planetCard:nth-child( 5 ) img {
+.solarSystem .planetsContainer .planetCard:nth-child( 5 ) img {
   width: 12em;
 }
 
-.solarSystem .planetas .planetCard:nth-child( 6 ) img {
+.solarSystem .planetsContainer .planetCard:nth-child( 6 ) img {
   width: 12em;
 }
 
 .missionsContainer {
   align-items: center;
+  background: rgba(255, 255, 255, 0.103);
+  border-radius: 20px;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   justify-content: center;
-  margin-top: 3em;
+  margin: auto;
+  margin-bottom: 16px;
+  margin-top: 80px;
+  padding: 12px;
+  width: 70%;
 }
 
 .missionsContainer .tituloMissões {
   display: flex;
   font-size: 1.2rem;
   justify-self: center;
-
-  /* border: 1px solid red; */
 }
 
 .missionsContainer .todasAsMissoes {
   display: flex;
   flex-flow: row wrap;
-  margin: 10px;
-  padding: 10px;
+  gap: 12px;
+  justify-content: center;
 }
 
-.missao {
+.missionCard {
   background-color: rgba(0, 0, 0, 0.521);
   border: 1px solid white;
-  margin-bottom: 8px;
-  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 10em;
+  justify-content: space-around;
+  padding: 8px;
+  width: 15em;
 }
 
-.missao p:nth-child( 1 ) {
+.missionCard p:nth-child( 1 ) {
   font-size: 1.5rem;
   font-weight: 700;
-  padding: 5px;
-}
-
-.missao p:nth-child( n+2 ):nth-child( -n+15 ) {
-  padding-bottom: 2px;
-  text-indent: 5px;
 }
